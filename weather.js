@@ -21,7 +21,7 @@ getWeather("marrakech");
 async function getWeather(city) {
   try {
     const apiKey = "abdc359b9abb425bbdc220742262903";
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5`;
     const response = await fetch(url);
     let data = await response.json();
     displayWeather(data);
