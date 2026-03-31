@@ -11,8 +11,9 @@ search.addEventListener("click", (e) => {
 });
 inputSearch.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    inputSearch.classList.add("icon-click");
+    inputSearch.classList.remove("icon-click");
     const city = inputSearch.value.trim();
+    inputSearch.value = "";
     getWeather(city);
   }
 });
